@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>التقارير - Organizer Ehab</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-gray-100 font-sans text-right">
+
+<!-- Navbar -->
+<header class="bg-blue-600 text-white p-4 shadow-md">
+  <div class="container mx-auto flex justify-between items-center">
+    <h1 class="text-xl font-bold">Organizer Ehab</h1>
+    <nav class="space-x-6 space-x-reverse">
+      <a href="index.html" class="hover:underline">الرئيسية</a>
+      <a href="tasks.html" class="hover:underline">المهام</a>
+      <a href="clients.html" class="hover:underline">العملاء</a>
+      <a href="campaigns.html" class="hover:underline">الحملات الإعلانية</a>
+      <a href="products.html" class="hover:underline">المنتجات</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Reports Section -->
+<main class="container mx-auto p-6">
+  <h2 class="text-2xl font-semibold mb-6">التقارير والإحصائيات</h2>
+
+  <!-- Quick Stats -->
+  <section class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+    <div class="bg-white p-5 rounded-lg shadow hover:shadow-lg transition">
+      <p class="text-sm text-gray-600">المهام الجديدة</p>
+      <p class="text-2xl font-bold text-blue-600" id="taskCount">0</p>
+    </div>
+    <div class="bg-white p-5 rounded-lg shadow hover:shadow-lg transition">
+      <p class="text-sm text-gray-600">العملاء الجدد</p>
+      <p class="text-2xl font-bold text-green-600" id="clientCount">0</p>
+    </div>
+    <div class="bg-white p-5 rounded-lg shadow hover:shadow-lg transition">
+      <p class="text-sm text-gray-600">المبيعات الشهرية</p>
+      <p class="text-2xl font-bold text-yellow-600" id="salesThisMonth">0</p>
+    </div>
+    <div class="bg-white p-5 rounded-lg shadow hover:shadow-lg transition">
+      <p class="text-sm text-gray-600">الفواتير غير المدفوعة</p>
+      <p class="text-2xl font-bold text-red-600" id="unpaidInvoices">0</p>
+    </div>
+  </section>
+
+  <!-- Charts -->
+  <section class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+    <div class="bg-white p-6 rounded-lg shadow">
+      <h3 class="font-bold text-lg mb-4">توزيع المهام حسب الحالة</h3>
+      <canvas id="taskStatusChart" width="400" height="300"></canvas>
+    </div>
+
+    <div class="bg-white p-6 rounded-lg shadow">
+      <h3 class="font-bold text-lg mb-4">مبيعات الشهر</h3>
+      <canvas id="monthlySalesChart" width="400" height="300"></canvas>
+    </div>
+  </section>
+
+  <!-- Predictions -->
+  <section class="bg-white p-6 rounded-lg shadow">
+    <h3 class="font-bold text-lg mb-4">توقعات المبيعات القادمة</h3>
+    <p class="text-sm text-gray-600">بناءً على الأداء الحالي، من المتوقع تحقيق <span id="predictedSales" class="font-medium text-blue-600">...</span> ريال خلال الشهر القادم.</p>
+  </section>
+</main>
+
+<script src="js/report.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+organizer-ehab/
+│
+├── index.html              ← الصفحة الرئيسية
+├── tasks.html              ← إدارة المهام
+├── clients.html            ← العملاء
+├── products.html           ← المنتجات
+├── invoices.html           ← الفواتير
+├── reports.html            ← التقارير والإحصائيات
+├── style.css               ← التصميم الأساسي
+├── app.js                  ← الوظائف المشتركة
+├── db.json                 ← قاعدة البيانات المحلية (JSON Server)
+├── tailwind.css            ← ملف Tailwind CSS
+└── js/                     ← ملفات JS لكل صفحة
+    ├── task.js             ← وظائف المهام
+    ├── client.js           ← وظائف العملاء
+    ├── product.js          ← وظائف المنتجات
+    └── invoice.js          ← وظائف الفواتير

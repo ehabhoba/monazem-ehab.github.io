@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>إدارة الفواتير - Organizer Ehab</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans text-right">
+
+<!-- Navbar -->
+<header class="bg-blue-600 text-white p-4 shadow-md">
+  <div class="container mx-auto flex justify-between items-center">
+    <h1 class="text-xl font-bold">Organizer Ehab</h1>
+    <nav class="space-x-6 space-x-reverse">
+      <a href="index.html" class="hover:underline">الرئيسية</a>
+      <a href="tasks.html" class="hover:underline">المهام</a>
+      <a href="clients.html" class="hover:underline">العملاء</a>
+      <a href="products.html" class="hover:underline">المنتجات</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Invoices Section -->
+<main class="container mx-auto p-6">
+  <h2 class="text-2xl font-semibold mb-6">إدارة الفواتير</h2>
+
+  <!-- Form to Add Invoice -->
+  <form id="invoiceForm" class="bg-white p-6 rounded-lg shadow mb-6">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-4">
+      <input type="text" id="clientName" placeholder="اسم العميل" required
+             class="border p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400" />
+
+      <input type="number" id="invoiceTotal" placeholder="المجموع (ريال)" class="border p-2 rounded" />
+
+      <input type="date" id="invoiceDate" class="border p-2 rounded" />
+
+      <select id="invoiceStatus" class="border p-2 rounded">
+        <option value="مدفوع">مدفوع</option>
+        <option value="غير مدفوع">غير مدفوع</option>
+      </select>
+    </div>
+
+    <button type="submit"
+            class="mt-4 bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition">
+      إضافة فاتورة
+    </button>
+  </form>
+
+  <!-- Invoices List -->
+  <div class="bg-white p-6 rounded-lg shadow">
+    <h3 class="font-bold text-lg mb-4">قائمة الفواتير</h3>
+    <ul id="invoiceList" class="space-y-4">
+      <!-- سيتم تعبئة الفواتير هنا ديناميكياً -->
+    </ul>
+  </div>
+</main>
+
+<script src="js/invoice.js"></script>
+</body>
+</html>

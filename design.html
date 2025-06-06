@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>التصميم الذكي - Organizer Ehab</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans text-right">
+
+<!-- Navbar -->
+<header class="bg-blue-600 text-white p-4 shadow-md">
+  <div class="container mx-auto flex justify-between items-center">
+    <h1 class="text-xl font-bold">Organizer Ehab</h1>
+    <nav class="space-x-6 space-x-reverse">
+      <a href="index.html" class="hover:underline">الرئيسية</a>
+      <a href="clients.html" class="hover:underline">العملاء</a>
+      <a href="campaigns.html" class="hover:underline">الحملات الإعلانية</a>
+      <a href="reports.html" class="hover:underline">التقارير</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Design Section -->
+<main class="container mx-auto p-6">
+  <h2 class="text-2xl font-semibold mb-6">التصميم الذكي</h2>
+
+  <!-- Form to Select Design Type -->
+  <form id="designForm" class="bg-white p-6 rounded-lg shadow mb-6">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+      <select id="designType" required class="border p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400">
+        <option value="">اختر نوع التصميم</option>
+        <option value="logo">شعار</option>
+        <option value="social_post">بوست سوشيال ميديا</option>
+        <option value="cover">غلاف فيسبوك/يوتيوب</option>
+        <option value="business_card">كارت شخصي</option>
+      </select>
+
+      <input type="text" id="clientName" placeholder="اسم العميل" class="border p-2 rounded" />
+
+      <input type="text" id="businessName" placeholder="اسم النشاط التجاري" class="border p-2 rounded" />
+    </div>
+
+    <button type="submit"
+            class="mt-4 bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition">
+      اقتراح تصميم
+    </button>
+  </form>
+
+  <!-- Smart Design Suggestions -->
+  <section class="bg-white p-6 rounded-lg shadow mb-6">
+    <h3 class="font-bold text-lg mb-4">اقتراح التصميم</h3>
+    <div id="designPreview" class="p-4 border rounded bg-gray-50 min-h-[200px]">
+      <p class="text-gray-500">سيتم عرض اقتراح التصميم هنا</p>
+    </div>
+  </section>
+
+  <!-- Export Options -->
+  <section class="bg-white p-6 rounded-lg shadow">
+    <h3 class="font-bold text-lg mb-4">خيارات التصدير</h3>
+    <div class="flex space-x-4 space-x-reverse">
+      <button onclick="exportToPNG()" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+        تنزيل PNG
+      </button>
+      <button onclick="sendToClient()" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">
+        إرسال للعميل
+      </button>
+    </div>
+  </section>
+</main>
+
+<script src="js/design.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>إدارة الحملات - Organizer Ehab</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans text-right">
+
+<!-- Navbar -->
+<header class="bg-blue-600 text-white p-4 shadow-md">
+  <div class="container mx-auto flex justify-between items-center">
+    <h1 class="text-xl font-bold">Organizer Ehab</h1>
+    <nav class="space-x-6 space-x-reverse">
+      <a href="index.html" class="hover:underline">الرئيسية</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Campaigns Section -->
+<main class="container mx-auto p-6">
+  <h2 class="text-2xl font-semibold mb-6">إدارة الحملات الإعلانية</h2>
+
+  <!-- Form to Add Campaign -->
+  <form id="campaignForm" class="bg-white p-6 rounded-lg shadow mb-6">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-4">
+      <select id="campaignPlatform" required class="border p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400">
+        <option value="">اختر المنصة</option>
+        <option value="فيسبوك">فيسبوك</option>
+        <option value="إنستجرام">إنستجرام</option>
+        <option value="تيك توك">تيك توك</option>
+        <option value="جوجل">جوجل</option>
+      </select>
+
+      <input type="number" id="campaignBudget" placeholder="الميزانية (جنية)" class="border p-2 rounded" />
+
+      <input type="text" id="targetAudience" placeholder="الجمهور المستهدف" class="border p-2 rounded" />
+
+      <input type="text" id="campaignObjective" placeholder="الهدف (مثل: زيادة المبيعات)" class="border p-2 rounded" />
+    </div>
+
+    <button type="submit"
+            class="mt-4 bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition">
+      اقتراح حملة
+    </button>
+  </form>
+
+  <!-- Suggested Campaign -->
+  <section class="bg-white p-6 rounded-lg shadow mb-6">
+    <h3 class="font-bold text-lg mb-4">اقتراح الحملة</h3>
+    <div id="campaignPreview" class="p-4 border rounded bg-gray-50 min-h-[150px]">
+      <p class="text-gray-500">سيتم اقتراح الحملة هنا بعد إدخال البيانات</p>
+    </div>
+  </section>
+
+  <!-- Send Campaign Proposal -->
+  <section class="bg-white p-6 rounded-lg shadow">
+    <h3 class="font-bold text-lg mb-4">إرسال الاقتراح للعميل</h3>
+    <button onclick="sendCampaignProposal()" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+      إرسال عبر واتساب
+    </button>
+  </section>
+</main>
+
+<script src="js/campaign.js"></script>
+</body>
+</html>

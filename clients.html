@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>إدارة العملاء - Organizer Ehab</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans text-right">
+
+<!-- Navbar -->
+<header class="bg-blue-600 text-white p-4 shadow-md">
+  <div class="container mx-auto flex justify-between items-center">
+    <h1 class="text-xl font-bold">Organizer Ehab</h1>
+    <nav class="space-x-6 space-x-reverse">
+      <a href="index.html" class="hover:underline">الرئيسية</a>
+      <a href="tasks.html" class="hover:underline">المهام</a>
+      <a href="campaigns.html" class="hover:underline">الحملات</a>
+      <a href="reports.html" class="hover:underline">التقارير</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Clients Section -->
+<main class="container mx-auto p-6">
+  <h2 class="text-2xl font-semibold mb-6">إدارة العملاء</h2>
+
+  <!-- Form to Add Client -->
+  <form id="clientForm" class="bg-white p-6 rounded-lg shadow mb-6">
+    <div class="grid grid-cols-1 md:grid-cols-5 gap-4 mb-4">
+      <input type="text" id="clientName" placeholder="اسم العميل" required
+             class="border p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400" />
+
+      <input type="text" id="clientBusiness" placeholder="نوع النشاط" class="border p-2 rounded" />
+
+      <input type="text" id="clientPhone" placeholder="رقم الهاتف" class="border p-2 rounded" />
+
+      <input type="email" id="clientEmail" placeholder="البريد الإلكتروني" class="border p-2 rounded" />
+
+      <select id="clientType" class="border p-2 rounded">
+        <option value="">اختر نوع العميل</option>
+        <option value="تصميم">تصميم</option>
+        <option value="تسويق">تسويق</option>
+        <option value="متجر">متجر إلكتروني</option>
+      </select>
+    </div>
+
+    <button type="submit"
+            class="mt-4 bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition">
+      إضافة عميل
+    </button>
+  </form>
+
+  <!-- Suggested Proposal -->
+  <section class="bg-yellow-50 border border-yellow-300 p-4 rounded-lg mb-6 hidden" id="proposalSection">
+    <h3 class="font-bold text-lg mb-2">اقتراح خدمة مخصصة</h3>
+    <p id="proposalText" class="text-sm text-gray-700"></p>
+    <div class="mt-4 flex space-x-2 space-x-reverse">
+      <button onclick="generatePDFProposal()" class="text-blue-600 hover:text-blue-800 text-sm">📄 تصدير PDF</button>
+      <button onclick="sendWhatsAppMessage()" class="text-green-600 hover:text-green-800 text-sm">💬 إرسال عبر واتساب</button>
+    </div>
+  </section>
+
+  <!-- Clients List -->
+  <div class="bg-white p-6 rounded-lg shadow">
+    <h3 class="font-bold text-lg mb-4">قائمة العملاء</h3>
+    <ul id="clientList" class="space-y-4">
+      <!-- سيتم تعبئة العملاء هنا ديناميكياً -->
+    </ul>
+  </div>
+</main>
+
+<script src="js/client.js"></script>
+</body>
+</html>

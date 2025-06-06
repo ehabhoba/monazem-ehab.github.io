@@ -1,0 +1,72 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "title": "تصميم شعار لشركة ABC",
+      "status": "قيد التنفيذ",
+      "dueDate": "2025-04-20"
+    },
+    {
+      "id": 2,
+      "title": "تعديل بوست إنستجرام",
+      "status": "مؤجلة",
+      "dueDate": "2025-04-18"
+    }
+  ],
+  "clients": [
+    {
+      "id": 1,
+      "name": "شركة ABC",
+      "phone": "+201022679250",
+      "email": "contact@abc.com",
+      "notes": "عميل محتمل للمشاريع القادمة"
+    },
+    {
+      "id": 2,
+      "name": "مؤسسة DEF",
+      "phone": "+201140057253",
+      "email": "def@example.com",
+      "notes": "طلب تصميم هوية بصرية"
+    }
+  ],
+  "campaigns": [
+    {
+      "id": 1,
+      "platform": "فيسبوك",
+      "objective": "زيادة المبيعات",
+      "targetAudience": "القاهرة، مصر",
+      "budget": "2000 ريال",
+      "startDate": "2025-04-15",
+      "endDate": "2025-04-30"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "كمامات طبية",
+      "price": 1.5,
+      "stock": 120
+    }
+  ],
+  "invoices": [
+    {
+      "id": 1,
+      "clientName": "شركة ABC",
+      "total": 300,
+      "date": "2025-04-05",
+      "status": "مدفوع"
+    }
+  ]
+}
+{
+  "clients": [
+    {
+      "id": 1,
+      "name": "شركة ABC",
+      "business": "مكتب تصميم",
+      "phone": "+201022679250",
+      "email": "contact@abc.com",
+      "type": "تصميم"
+    }
+  ]
+}

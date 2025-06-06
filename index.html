@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Organizer Ehab</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans text-right">
+
+<!-- Navbar -->
+<header class="bg-blue-600 text-white p-4 shadow-md">
+  <div class="container mx-auto flex justify-between items-center">
+    <h1 class="text-xl font-bold">Organizer Ehab</h1>
+    <nav class="space-x-6 space-x-reverse">
+      <a href="tasks.html" class="hover:underline">المهام</a>
+      <a href="clients.html" class="hover:underline">العملاء</a>
+      <a href="campaigns.html" class="hover:underline">الحملات الإعلانية</a>
+      <a href="products.html" class="hover:underline">المنتجات</a>
+      <a href="reports.html" class="hover:underline">التقارير</a>
+      <a href="design.html" class="hover:underline">التصميم الذكى</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Dashboard -->
+<main class="container mx-auto p-6">
+  <!-- Welcome Section -->
+  <section class="mb-8">
+    <h2 class="text-2xl font-semibold mb-2">مرحبًا بك، إيهاب!</h2>
+    <p class="text-gray-600">منصة شاملة لإدارة المهام والمشاريع الرقمية الخاصة بك.</p>
+  </section>
+
+  <!-- Quick Stats -->
+  <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+    <div class="bg-white p-5 rounded-lg shadow hover:shadow-lg transition">
+      <h3 class="font-bold text-lg text-blue-600">المهام الجديدة</h3>
+      <p class="text-3xl font-bold mt-2" id="taskCount">0</p>
+    </div>
+    <div class="bg-white p-5 rounded-lg shadow hover:shadow-lg transition">
+      <h3 class="font-bold text-lg text-green-600">العملاء الجدد</h3>
+      <p class="text-3xl font-bold mt-2" id="clientCount">0</p>
+    </div>
+    <div class="bg-white p-5 rounded-lg shadow hover:shadow-lg transition">
+      <h3 class="font-bold text-lg text-yellow-600">المبيعات اليومية</h3>
+      <p class="text-3xl font-bold mt-2" id="salesToday">0</p>
+    </div>
+    <div class="bg-white p-5 rounded-lg shadow hover:shadow-lg transition">
+      <h3 class="font-bold text-lg text-red-600">الفواتير غير المدفوعة</h3>
+      <p class="text-3xl font-bold mt-2" id="unpaidInvoices">0</p>
+    </div>
+  </section>
+
+  <!-- Tasks Due Soon -->
+  <section class="bg-white p-6 rounded-lg shadow mb-8">
+    <h3 class="font-bold text-lg mb-4">المهام المستحقة قريباً</h3>
+    <ul id="dueTasks" class="text-sm text-gray-700 space-y-2">
+      <li>⚠️ لا توجد مهام مستحقة حالياً</li>
+    </ul>
+  </section>
+
+  <!-- Recent Activities -->
+  <section class="bg-white p-6 rounded-lg shadow">
+    <h3 class="font-bold text-lg mb-4">آخر الأنشطة</h3>
+    <ul class="text-sm text-gray-600 space-y-2">
+      <li>✔️ تم تسليم تصميم شعار جديد لشركة ABC</li>
+      <li>📊 بدأت حملة إعلانية جديدة على فيسبوك</li>
+      <li>📦 أُضيف منتج جديد إلى المتجر الإلكتروني</li>
+    </ul>
+  </section>
+</main>
+
+<footer class="text-center text-sm text-gray-500 mt-8 pb-4">
+  © جميع الحقوق محفوظة لشركة EhabGM Online Services 2025
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>
